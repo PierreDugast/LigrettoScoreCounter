@@ -62,12 +62,12 @@
                     <div class="crown font-bold text-xl text-gray-700 transform rotate-35 shadow-2xl ">👑</div>
                 {/if}
                 <button class='delete h-8 py-1 px-3 text-s font-semibold rounded-full hover:bg-red-500 text-white focus:outline-none focus:ring-2 focus:ring-blue bg-gray-600 z-10' on:click={removeComponent} >X</button>
-                <h3 class="name font-bold text-xl text-gray-900 "><input class="pr-4 pl-4 pt-4 pb-4 rounded-lg shadow-inner bg-gray-100"placeholder="Joueur" on:change={yell} bind:value={objAttributes.name} ></h3>
+                <h3 class="name font-bold text-xl text-gray-900 "><input class="pr-4 pl-4 pt-4 pb-4 rounded-lg shadow-inner bg-gray-100"placeholder="Joueur" on:input={yell} bind:value={objAttributes.name} ></h3>
                 <div class="score text-black-700 text-l font-semibold rounded-full ml-60">
                     <p>Score {#if objAttributes.score.length != 0}  <span class="text-black-700 text-l font-semibold rounded-full bg-gray-200 pt-1 pb-1 pr-2 pl-2 ">{objAttributes.score}</span>{/if}</p>
                 </div>
                 <p class="text-gray-500 my-1 ">
-                    <input class="hist_input shadow-inner" type=text placeholder="" on:click={updateHistory} bind:value={objAttributes.history} >
+                    <input class="hist_input shadow-inner" type=text placeholder="" on:input={updateHistory} bind:value={objAttributes.history} >
                 </p>
             
             </div>
