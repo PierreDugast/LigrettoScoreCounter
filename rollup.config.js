@@ -60,6 +60,8 @@ export default {
 		}),
 		commonjs(),
 
+
+
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
 		!production && serve(),
@@ -72,6 +74,16 @@ export default {
 		// instead of npm run dev), minify
 		production && terser()
 	],
+
+	preprocess: sveltePreprocess({
+		sourceMap: !production,
+		postcss: {
+			plugins: [
+			require("tailwindcss"), 
+			require("autoprefixer"),
+			],
+		},
+		}),
 	watch: {
 		clearScreen: false
 	}

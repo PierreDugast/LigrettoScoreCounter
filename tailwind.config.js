@@ -1,13 +1,17 @@
+const production = !process.env.ROLLUP_WATCH;
 module.exports = {
-  theme: {
-    container: {
-      center: true,
-      padding: '1rem',
-    },
-    extend: {},
+  future: {
+    purgeLayersByDefault: true,
+    removeDeprecatedGapUtilities: true,
   },
+  plugins: [
 
-  variants: {},
+  ],
+  purge: {
+    content: [
+     "./src/**/*.svelte",
 
-  plugins: [require('@tailwindcss/custom-forms')],
-}
+    ],
+    enabled: production // disable purge in dev
+  },
+};
