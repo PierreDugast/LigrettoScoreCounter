@@ -9,7 +9,7 @@ module.exports = {
   ],
   purge: {
     content: [
-     "./src/**/*.svelte",
+     "./src/*.svelte",
 
     ],
     enabled: production // disable purge in dev
