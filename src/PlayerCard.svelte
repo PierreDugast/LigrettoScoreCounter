@@ -67,7 +67,7 @@
                     <p>Score {#if objAttributes.score.length != 0}  <span class="text-black-700 text-l font-semibold rounded-full bg-gray-200 pt-1 pb-1 pr-2 pl-2 ">{objAttributes.score}</span>{/if}</p>
                 </div>
                 <p class="text-gray-500 my-1 ">
-                    <input class="hist_input shadow-inner" type=text placeholder="" on:change={updateHistory} bind:value={objAttributes.history} >
+                    <input type="number" class="hist_input shadow-inner" type=text placeholder="" on:change={updateHistory} bind:value={objAttributes.history} >
                 </p>
             
             </div>
